@@ -2,108 +2,107 @@
 
 ![paperspace](https://raw.githubusercontent.com/Engineer-of-Stuff/stable-diffusion-paperspace/main/docs/assets/paperspace.png)
 
-**What is Paperspace?**
+**Paperspace가 무엇인가요?**
 
-Basically, a cloud compute service for AI development aimed at professionals developing proprietary models. You run your code on their hardware. They offer a lot of really neat things you can use for developing neural networks but we're only use Gradient.
+기본적으로 독점 모델을 개발하는 전문가를 대상으로 하는 AI 개발용 클라우드 컴퓨팅 서비스입니다. 하드웨어에서 코드를 실행합니다. 신경망 개발에 사용할 수 있는 정말 멋진 기능들을 많이 제공하지만, 저희는 Gradient만 사용하고 있습니다.
 
-**Why Paperspace?**
+**왜 Paperspace 인가요?**
 
-Paperspace is convenient, free, and you probably don't have a computer good enough to run the AI. They're aimed at professionals whereas Colab is literally for children.
+Paperspace는 편리하며, AI를 실행하기에 충분한 컴퓨터가 없을 수도 있습니다. 전문가를 대상으로 하는 반면 Colab은 말 그대로 어린이를 위한 서비스입니다.
+2023.09.01 현황 : 현재 무료 요금제에서 GPU를 사용할 수 있는 할당량이 모두 차서 사용할 수 없으며, *8$의 Pro 이상에서만* GPU를 사용할 수 있습니다.
 
-You'll run your code on their powerful GPUs which is much faster and easier than locally on your computer.
-
-
-
-**Do I have to pay?**
-
-Only if you feel limited by their free tier. You should have everything you need to generate ~~porn~~ really neat images. I'm pretty sure Paperspace is cheaper than Google Colab Pro.
+강력한 GPU에서 코드를 실행하면 컴퓨터 로컬보다 훨씬 빠르고 쉽게 코드를 실행할 수 있습니다.
 
 
 
-**Why not Google Colab?**
+**비용을 지불해야 하나요?**
 
-Google Colab is an alternative, but their free tier is more restrictive than Paperspace's and has less powerful hardware. And, knowing Google, they probably record what you generate.
+현재 기준으로 지불해야합니다. 정말 깔끔한 이미지를 생성하는 데 필요한 모든 것을 갖추고 있어야 합니다. Paperspace가 Google Colab Pro보다 저렴하다고 확신합니다.
 
-Google deletes your files once the machine turns off. Paperspace doesn't do that, even on the free tier.
+월 기준 (2023.09.01 기준 설명)
+Paperspace Pro : 8$
+Google Colab Pro : 9.99$
 
-**But I want to run it on Google Colab!**
+Paperspace Growth : 39$
+Google Colab Pro+ : 49.99$
 
-Ok fine. [Here's the official colab notebook by Voldy himself.](https://colab.research.google.com/drive/1Iy-xW9t1-OQWhb0hNxueGij8phCyluOh)
+자세한 결제 정보는 [Paperspace Plans](https://www.paperspace.com/pricing)과 [Colab Plans](https://colab.research.google.com/signup)를 참조하세요.
 
-**But I'd rather run it on my own computer!**
+**왜 Google Colab이 아닌가요?**
 
-Running it in the cloud is much easier and you're less likely to mess up your OS, but since you insist, here's a Docker container to make is simpler: [AbdBarho/stable-diffusion-webui-docker](https://github.com/AbdBarho/stable-diffusion-webui-docker)
+Google Colab도 대안이 될 수 있지만 사용자가 생성하는 모든 내용을 기록할 가능성이 높습니다.
 
-
-## Let's do it!
-
+Google은 컴퓨터가 꺼지면 파일을 삭제합니다. Paperspace는 무료 티어에서도 그렇게 하지 않습니다.
 
 
-1. [Create an Account](https://console.paperspace.com/signup) You will be asked for your phone number.
+## 해봅시다!
 
-2. Click this button and fill out the form that pops up
 
-![create_project](https://raw.githubusercontent.com/Engineer-of-Stuff/stable-diffusion-paperspace/main/docs/assets/create_project.png)
 
-3. Click this button to create a notebook
+1. [계정_생성](https://console.paperspace.com/signup) 휴대폰 번호를 입력하라는 메시지가 표시됩니다.
 
-![create_notebook](https://raw.githubusercontent.com/Engineer-of-Stuff/stable-diffusion-paperspace/main/docs/assets/create_notebook.png)
+2. 이 버튼을 클릭하고 팝업되는 양식을 작성합니다.
 
-4. Under "Runtime" select "Start from Stratch"
+3. 업그레이드를 선택하여 프로 이상의 요금제를 선택해야합니다.
 
-![start_scratch.png](https://raw.githubusercontent.com/Engineer-of-Stuff/stable-diffusion-paperspace/main/docs/assets/start_scratch.png)
+![프로젝트_만들기](https://raw.githubusercontent.com/ghkimwoo/stable-diffusion-paperspace-korean/main/docs/assets/create_project.png)
 
-5. Download [StableDiffusionUI_Voldemort_paperspace.ipynb](https://github.com/Engineer-of-Stuff/stable-diffusion-paperspace/blob/main/StableDiffusionUI_Voldemort_paperspace.ipynb)
-Make sure you click the "Raw" button near the top right and do `ctrl+s` on the page with the raw text. Don't download the webpage.
+3. 노트북을 만들려면 이 버튼을 클릭하세요.
 
-You can also open a terminal in the notebook and run this command to download the notebook to the machine. Then skip step 6.
+![노트북_만들기](https://raw.githubusercontent.com/ghkimwoo/stable-diffusion-paperspace-korean/main/docs/assets/create_notebook.png)
+
+4. "런타임"에서 "처음부터 시작"을 선택합니다.
+
+![시작_스크래치.png](https://raw.githubusercontent.com/ghkimwoo/stable-diffusion-paperspace-korean/main/docs/assets/start_scratch.png)
+
+5. 다운로드 [StableDiffusionUI_Voldemort_paperspace.ipynb](https://github.com/ghkimwoo/stable-diffusion-paperspace-korean/blob/main/StableDiffusionUI_Voldemort_paperspace.ipynb)
+오른쪽 상단에 있는 'Raw' 버튼을 클릭하고 Raw 텍스트가 있는 페이지에서 `ctrl+s`를 실행하세요. 웹페이지를 다운로드하지 마세요.
+
+노트북에서 터미널을 열고 이 명령을 실행해 노트북을 컴퓨터로 다운로드할 수도 있습니다. 그런 다음 6단계를 건너뜁니다.
 
 ```
-wget https://raw.githubusercontent.com/Engineer-of-Stuff/stable-diffusion-paperspace/master/StableDiffusionUI_Voldemort_paperspace.ipynb
+wget https://raw.githubusercontent.com/ghkimwoo/stable-diffusion-paperspace-korean/master/StableDiffusionUI_Voldemort_paperspace.ipynb
 ```
 
-6. Upload that file to your notebook
+6. 해당 파일을 노트북에 업로드하세요
 
-You don't have to clone/download the entire repository, just the `.ipynb` file.
+전체 리포지토리를 복제/다운로드할 필요 없이 '.ipynb' 파일만 복제/다운로드하면 됩니다.
 
 ![upload](https://raw.githubusercontent.com/Engineer-of-Stuff/stable-diffusion-paperspace/main/docs/assets/upload.png)
 
-7. Follow directions
+7. 지시 사항 따르기
 
-I worked hard to make the setup process automated and fool-proof. Read it!
+설정 프로세스를 자동화하고 실수가 없도록 하기 위해 열심히 노력했습니다. 읽어보세요!
 
 ![final](https://raw.githubusercontent.com/Engineer-of-Stuff/stable-diffusion-paperspace/main/docs/assets/final.png)
-(this image is outdated)
+(이 이미지는 오래되었습니다.)
 
-## Launch the Jupyter Notebook
+## Jupyter 노트북 실행
 
-Click this symbol in the left vertical menubar.
+왼쪽 세로 메뉴 표시줄에서 이 기호를 클릭합니다.
 
 ![open-jupiter](https://raw.githubusercontent.com/Engineer-of-Stuff/stable-diffusion-paperspace/main/docs/assets/open-jupiter.png)
 
-You can access the terminal in the Jupyter Notebook.
+주피터 노트북에서 터미널에 액세스할 수 있습니다.
 
+## Python 3.10에 대한 참고 사항
 
-## A note about Python 3.10
+Python 3.10은 WebUI를 실행하는 데 권장되는 Python 버전입니다. 문제가 발생하면 Python 3.10에서 WebUI를 실행하면 도움이 될까요? Paperspace는 Python 3.9를 사용하므로 사용자 정의 컨테이너를 실행해야 합니다.
 
-Python 3.10 is the recommended Python version for running the WebUI. If you encounter any issues, maybe running the WebUI in Python 3.10 will help? Paperspace uses Python 3.9 so you must run a custom container.
+이미 머신을 생성한 경우 다음 지침에 따라 해당 머신을 삭제하고 새 머신을 생성하세요.: https://docs.paperspace.com/gradient/notebooks/runtimes/#how-to-specify-a-custom-container
 
-If you have already created a machine, delete it and create a new one following these instructions: https://docs.paperspace.com/gradient/notebooks/runtimes/#how-to-specify-a-custom-container
+다음 컨테이너 이미지를 사용해야 합니다.: `cyberes/gradient-base-py3.10:latest`
 
-Make sure to use this container image: `cyberes/gradient-base-py3.10:latest`
+## 도움이 더 필요합니다 :(
 
-## I need more help :(
+다음은 다른 가이드입니다. 기술 지원 질문으로 /sdg/를 엉망으로 만들지 마세요.
 
-Here's some other guides. Please don't shit up /sdg/ with tech support questions.
-
-Pro-tip: go lurk in /sdg/ on /g/ and view /sdg/ archives for tips, tricks, and suggestions.
-
-Here's some other guides, maybe one of these will help:
+다음은 다른 가이드 중 하나에 도움이 될 만한 내용입니다:
 - [A guide to getting started with the paperspace port of AUTOMATIC1111’s web UI for ppl who get nervous](https://proximacentaurib.notion.site/A-guide-to-getting-started-with-the-paperspace-port-of-AUTOMATIC1111-s-web-UI-for-ppl-who-get-nervou-b83c2213f17e452e8b0e37ba64fe9758)
 - [Getting Started Stable Diffusion 2 in Paperspace Notebook](https://weirdwonderfulai.art/resources/getting-started-stable-diffusion-2-in-paperspace-notebook/)
 - [How to Setup Deforum Stable Diffusion WebUI on Paperspace (video)](https://www.youtube.com/watch?v=YuislijDeFo)
 
-## Other guides related to the WebUI
+## WebUI 관련 기타 가이드
 
 - [FINAL GUI RETARD GUIDE](https://rentry.org/voldy)
 - [Using the WebUI](https://rentry.org/voldy)

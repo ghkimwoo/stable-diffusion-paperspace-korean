@@ -1,8 +1,8 @@
-# Docs
+# 문서
 
-### External Resources
+### 외부 리소스
 
-Copies in `stable-diffusion-paperspace/Docs/Archives`. 
+`stable-diffusion-paperspace/Docs/Archives`에서 복사되었습니다. 
 
 - https://rentry.org/voldy
 - https://rentry.org/drfar
